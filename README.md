@@ -1,4 +1,4 @@
-# Nudata web payload
+# Nudata web payload (WIP)
 
 ## How Nudata web works
 
@@ -113,7 +113,15 @@ customHash(measureTextWidths())
 ```
 
 ### ic
-Don't know for now
+Always the same, could be different if N was different but for now never met a case where that happened
+```js
+d = 0
+c = "de"
+N = ""
+Z = 25
+
+N = 0 < Z && N.length > Z ? d.toString(16) + "," + wa + ";0," + c + ";" : N + (d.toString(16) + "," + c + ";");
+```
 
 ### wt:
 is at the bottom litteraly called "wt"
