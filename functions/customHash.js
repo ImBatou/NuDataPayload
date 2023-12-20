@@ -1,4 +1,4 @@
-function hashFunction(inputString) {
+function customHash(inputString) {
     var hash1 = 0, hash2 = 0, charCode;
 
     if (inputString.length === 0)

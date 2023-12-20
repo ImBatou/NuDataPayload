@@ -1,25 +1,24 @@
 {
     "widgetData":{
-       "bd":"243:911:1920:1032:1920:1032", 					// innerWidth + ":" + innerHeight + ":" + window.outerWidth + ":" + window.outerHeight + ":" + screen.availWidth + ":" + screen.availHeight
-       "jsv":"sync-1",										// Just a string (ndjsStaticVersion in the js)
-       "wv":"2.3.1",										// Just a string (ndsWidgetVersion in the js)
-       "bp":"2501cc0f72219bbc",								// Hash the function to get the list of all the plugins			-> getPluginInfo()
-       "sr":"1080x1920 24",									// screen.width + "x" + screen.height + " " + screen.colorDepth
-       "didtz":"-60",										// Timezone 													-> getDeviceTimezone()
-       "wkr":47516,											// Random number between 100 and 1000000
-       "flv":"false",										// is flash installed (Should always be false on new browsers)
-       "fv":"fv,ogg,mp4,webm",								// Same as fa but for video 									-> supportedVideoFormats()
-       "fa":"fa,mpeg,ogg,wav",								// Basically get the audio 										-> getSupportedAudioFormats()
-       "hf":"544477a44760ec14",								// Hash of a html canva created					 				-> generateCanvasImage()
-       "pl":"Win32",										// navigator.platform
-       "ft":"{\"mtp\":0,\"ts\":false,\"te\":false}",		// Test if it's tactile 										-> detectTouchCapabilities()
-       "fc":"{\"tc\":true,\"nc\":true}",					// check cookies, should both be true if new browser 			-> checkCookiesSupport()
-       "fs":"true",											// Check if window.localStorage works 						-> checkLocalStorage()
-       "wg":"7a05ce18a39ff8b",								// Hash of JSON.stringify of some webgl info 					-> getWebGLInfo()
-       "fm":"1e5e8e4ffa292f76",								// hash of fonction (fontMetrics) 								-> measureTextWidths()
-       "ipr":"ncip,0,658262b7,2,1;st,0,email[objectobject]__input,0,password[objectobject]__input,0;", //Un peu chiant donc explication en bas
+       "bd":"243:911:1920:1032:1920:1032",
+       "jsv":"sync-1",
+       "wv":"2.3.1",
+       "bp":"2501cc0f72219bbc",
+       "sr":"1080x1920 24",
+       "didtz":"-60",
+       "wkr":47516,
+       "flv":"false",
+       "fv":"fv,ogg,mp4,webm",
+       "fa":"fa,mpeg,ogg,wav",
+       "hf":"544477a44760ec14",
+       "pl":"Win32",
+       "ft":"{\"mtp\":0,\"ts\":false,\"te\":false}",
+       "fc":"{\"tc\":true,\"nc\":true}",
+       "fs":"true",
+       "wg":"7a05ce18a39ff8b",
+       "fm":"1e5e8e4ffa292f76",
+       "ipr":"ncip,0,658262b7,2,1;st,0,email[objectobject]__input,0,password[objectobject]__input,0;",
        "ic":"0,de;"
     },
-    //wt is at the bottom litteraly called "wt"
     "wt":"1.w-481390.1.2.KUc2RvGhD_f5U4DsheHhag,,.0lKMXhbNqHAoAwVBipx_EqWZUcWLG-RCOcdRblR2oLQKg8YAsdLn49RcL6on63PfktKXWIJturN6Rrvo2hn2kdLy6Q0P-wE22c7SlvcbSo8lZBmlb0_VkGEOMolMUfLuVoE_u73ZeteYtvbW9POqu_Dp4fPo6x6E5Gil0a19hR7iYHEPt8O67-b0Jk1MCOBoFGTPk9E_D6ECqhXJwaiZj34cmfgdey2JX-hv5eK-MeeK72O9QPxwdH4ikuoJhpAa"
  }
