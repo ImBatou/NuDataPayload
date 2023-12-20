@@ -19,78 +19,101 @@ function scrambleText(inputString) {
 
 ## The variables
 
-* **bd:** Check some screen info, full function : 
+### bd
+Check some screen info, full function : 
 ```js
 innerWidth + ":" + innerHeight + ":" + window.outerWidth + ":" + window.outerHeight + ":" + screen.availWidth + ":" + screen.availHeight
 ```
 
-* **jsv:** Just a string (ndjsStaticVersion in the js)
-* **wv:** Just a string (ndsWidgetVersion in the js)
-* **bp:** Hash of all the plugins
+### jsv
+Just a string (ndjsStaticVersion in the js)
+
+### wv
+Just a string (ndsWidgetVersion in the js)
+
+### bp
+Hash of all the plugins
 ```js
 customHash(getPluginInfo().toString())
 ```
-* **sr:** Resolution + colorDepth
+
+### sr
+Resolution + colorDepth
 ```js
 screen.width + "x" + screen.height + " " + screen.colorDepth
 ```
 
-* **didtz:** Timezone
+### didtz
+Timezone
 ```js
 getDeviceTimezone()
 ```
 
-* **wkr:** Random number between 100 and 1000000
+### wkr
+Random number between 100 and 1000000
 ```js
 Math.floor(1000000 * Math.random()) + 1000
 ```
 
-* **flv:** is flash installed (Should always be false on new browsers)
-* **fv:** Get video types supported
+### flv
+Check if flash installed (Should always be false on new browsers)
+
+### fv
+Get video types supported
 ```js
 supportedVideoFormats()
 ```
 
-* **fv:** Get audio types supported
+### fv
+Get audio types supported
 ```js
 getSupportedAudioFormats()
 ```
 
-* **hf:** Hash of a html canva created
+### hf
+Hash of a html canva created
 ```js
 customHash(generateCanvasImage())
 ```
 
-* **pl:** Navigator platform
+### pl
+Navigator platform
 ```js
 navigator.platform
 ```
 
-* **ft:** Tactile
+### ft
+Tactile capabilities
 ```js
 detectTouchCapabilities()
 ```
 
-* **fc:**  Check cookies, should both be true if new browser
+### fc
+Check cookies, should both be true if new browser
 ```js
 checkCookiesSupport()
 ```
 
-* **fs:** Check if window.localStorage works
+### fs
+Check if window.localStorage works
 ```js
 checkLocalStorage()
 ```
 
-* **wg:** Hash of webgl info
+### wg
+Hash of webgl info
 ```js
 customHash(JSON.stringify(getWebGLInfo()))
 ```
 
-* **fm:** Hash of font fingerprint
+### fm
+Hash of font fingerprint
 ```js
 customHash(measureTextWidths())
 ```
 
-* **ic:** Don't know for now
+### ic
+Don't know for now
 
-* **wt:** is at the bottom litteraly called "wt"
+### wt:
+is at the bottom litteraly called "wt"
