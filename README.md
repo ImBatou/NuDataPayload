@@ -118,17 +118,26 @@ Don't know for now
 ### wt:
 is at the bottom litteraly called "wt"
 
+
+
+
 ## The more complex part (ipr)
 
 Now that we know the "easy" variable the is one missing called **ipr**
 
-Ipr follow the same principle each time, it is a list of action, each separated by a ;
+Ipr follow the same principle each time, it is a list of action, each starting with their name and ending with a semicolon **;**
+
+The list of possible actions are those (that I found in the file if you found others please tell me):
+st, mms, so, ff, kd, ku, kk, ff, fb, **mc**, or, gy, ac, lac, te, **mm**
+
+The one not in bold are the actions that I did not meet and so do not explain here, if you happen to find a page using one of those, please contact me and send me the link
+
 
 * It always starts with a hard coded part
 ```
 ncip,0,
 ```
-* After that the actual epoch timestamp in hexadecimal
+* After that the actual epoch timestamp (in s) in hexadecimal
 ```js
 date = parseInt((new Date).getTime() / 1000, 10)
 hexa = Math.round(date).toString(16)
@@ -138,7 +147,21 @@ hexa = Math.round(date).toString(16)
 ,2,1;
 ```
 
-* Now you should have the first action (example)
+* Now you should have the first action
+*Example*
 ```
 ncip,0,658262b7,2,1;
+```
+
+### mm
+mm is for "MouseMovement" the payload is constitued of four parts:
+
+* The name
+* The time (in ms) difference between this one and the precedent action in hexa
+* The x value in hexa (data.e in my example)
+* The y value in hexa (data.f)
+* The id of where you are moving on
+*Example*
+```
+mm,121d3d,f2,c7,Main;
 ```
