@@ -128,10 +128,12 @@ Now that we know the "easy" variable the is one missing called **ipr**
 Ipr follow the same principle each time, it is a list of action, each starting with their name and ending with a semicolon **;**
 
 The list of possible actions are those (that I found in the file if you found others please tell me):
-st, mms, so, ff, kd, ku, kk, ff, fb, **mc**, or, gy, ac, lac, te, **mm**
+**ncip***, st, mms, so, **ff***, kd, ku, **kk***, fb, **mc***, or, gy, ac, lac, te, **mm***
 
 The one not in bold are the actions that I did not meet and so do not explain here, if you happen to find a page using one of those, please contact me and send me the link
 
+### ncip
+ncip is **always** the first action in the list
 
 * It always starts with a hard coded part
 ```
@@ -153,8 +155,25 @@ hexa = Math.round(date).toString(16)
 ncip,0,658262b7,2,1;
 ```
 
+### ts
+ts is for "TimeStamp" and will be an important one because it follows a lot of the next payload that we will talk about
+
+* The name
+* The time (in ms) difference between this one and the precedent action in hexa, but because this action is right next to a precedent one, this should always be 0
+* The time (in ms) difference between this one and the creation of the ncip
+*Example*
+```
+ts,0,128be;
+```
+
+Be careful, on the first ts for the ncip, you should not put 0 on the third value but nothing
+*Example*
+```
+ncip,0,658262b7,2,1;ts,0,;
+```
+
 ### mm
-mm is for "MouseMovement" the payload is constitued of four parts:
+mm is for "MouseMovement":
 
 * The name
 * The time (in ms) difference between this one and the precedent action in hexa
@@ -165,3 +184,48 @@ mm is for "MouseMovement" the payload is constitued of four parts:
 ```
 mm,121d3d,f2,c7,Main;
 ```
+
+This payload is usually followed by a ts one
+
+### mc
+mc is for "MouseClick":
+
+* The name
+* The time (in ms) difference between this one and the precedent action in hexa
+* The x value in hexa (data.e in my example)
+* The y value in hexa (data.f)
+* The id of where you are moving on
+*Example*
+```
+mc,625c,80,fe,email[objectobject]__input
+```
+
+This payload is usually followed by a ts one
+
+### kk
+The first payload for the "Focus" event:
+
+* The name
+* The time (in ms) difference between this one and the precedent action in hexa
+* The length of the input where the focus is done (if nothing in the input yet : 0)
+* The id of where you are moving on
+
+*Example with test in the input box*
+```
+kk,18bee,4,email[objectobject]__input;
+```
+
+This payload is usually followed by a ts one
+
+### ff
+ff is the second event of the "Focus" event:
+
+* The name
+* The time (in ms) difference between this one and the precedent action in hexa
+* The id of where you are moving on
+*Example*
+```
+ff,3f88,email[objectobject]__input;
+```
+
+This payload is usually followed by a ts one
