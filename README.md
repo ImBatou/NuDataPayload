@@ -120,7 +120,7 @@ is at the bottom litteraly called "wt"
 
 ## The more complex part (ipr)
 
-Now that we now the "easy" variable the is one missing called **ipr**
+Now that we know the "easy" variable the is one missing called **ipr**
 
 Ipr follow the same principle each time, it is a list of action, each separated by a ;
 
