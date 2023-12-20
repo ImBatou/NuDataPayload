@@ -117,3 +117,28 @@ Don't know for now
 
 ### wt:
 is at the bottom litteraly called "wt"
+
+## The more complex part (ipr)
+
+Now that we now the "easy" variable the is one missing called **ipr**
+
+Ipr follow the same principle each time, it is a list of action, each separated by a ;
+
+* It always starts with a hard coded part
+```
+ncip,0,
+```
+* After that the actual epoch timestamp in hexadecimal
+```js
+date = parseInt((new Date).getTime() / 1000, 10)
+hexa = Math.round(date).toString(16)
+```
+* Another hardcoded part (it's not hardcoded but it never change for the first time)
+```
+,2,1;
+```
+
+* Now you should have the first action (example)
+```
+ncip,0,658262b7,2,1;
+```
